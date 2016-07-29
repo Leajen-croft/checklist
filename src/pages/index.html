@@ -1,0 +1,120 @@
+<!-- <div class="row checklist">
+  {{#each checklist}}
+    <div class="small-12 medium-6 columns">
+      <div class="header clearfix">
+        <h1 class="small-8 columns">{{@key}}</h1>
+        <p class="small-2 columns">complete</p>
+        <p class="small-2 columns">signed off</p>
+      </div>
+      <div class="list clearfix">
+        {{#each this}}
+          <ul class="checklist-items">
+            <h2>{{@key}}</h2>
+            {{#each this}}
+              <li class="clearfix">
+                <span class="small-8 columns">{{ this }}</span>
+                <span class="small-2 columns"><input type="checkbox" name="check" value="check"></span>
+                <span class="small-2 columns"><input type="checkbox" name="check" value="check"></span>
+              </li>
+            {{/each}}
+          </ul>
+        {{/each}}
+      </div>
+    </div>
+  {{/each}}
+</div> -->
+<div class="row">
+  {{#each checklist}}
+    <div class="small-12 columns checklist">
+        <div class="header small-12 columns">
+          <h2>{{@key}}</h2>
+        </div>
+        <div class="checklist__options row">
+          {{#each this}}
+          <div class="small-12 medium-6 columns">
+            <div class="row checklist__header">
+              <h3 class="small-8 columns">{{@key}}</h3>
+              <p class="small-2 columns text-center">Done</p>
+              <p class="small-2 columns text-center">QA Check</p>
+            </div>
+              <ul class="checklist__items clearfix">
+                {{#each this}}
+                  <li class="row">
+                    <span class="small-8 columns">{{ this }}</span>
+                    <span class="small-2 columns text-center">
+                      <input type="checkbox" id="done-{{@index}}" name="done-{{@index}}" value="check">
+                      <label for="done-{{@index}}">
+                        <svg class="icon icon-checkbox-off checkbox"><use xlink:href="#icon-checkbox-off"></use></svg>
+                       <svg class="icon icon-checkbox-on checkbox"><use xlink:href="#icon-checkbox-on"></use></svg>
+                      </label>
+                  </span>
+
+                    <span class="small-2 columns text-center">
+                      <input type="checkbox" id="qa-{{@index}}" name="qa-{{@index}}" value="check">
+                      <label for="qa-{{@index}}">
+                        <svg class="icon icon-checkbox-off checkbox"><use xlink:href="#icon-checkbox-off"></use></svg>
+                       <svg class="icon icon-checkbox-on checkbox"><use xlink:href="#icon-checkbox-on"></use></svg>
+                      </label>
+                    </span>
+                  </li>
+                {{/each}}
+              </ul>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+  {{/each}}
+</div>
+
+
+<!-- <div class="row">
+  <div class="small-12 medium-6 columns">
+    <table>
+      <thead>
+        <tr>
+          <td>
+            homepage
+          </td>
+          <td>
+            complete
+          </td>
+          <td>
+            sign off
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            test
+          </td>
+          <td>
+            <input type="checkbox" name="check" value="check">
+          </td>
+          <td>
+            <input type="checkbox" name="check" value="check">
+          </td>
+        </tr>
+          {{#each breakfast}}
+          <tr>
+            <td>
+              <h2>{{@key}}</h2>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+          </tr>
+            {{#each this}}
+              <tr>
+                <td> {{ this }} </td>
+                <td><input type="checkbox" name="check" value="check"></td>
+                <td><input type="checkbox" name="check" value="check"></td>
+              </tr>
+            {{/each}}
+          {{/each}}
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
