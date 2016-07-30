@@ -1,19 +1,23 @@
 Pages:
   Navigation:
-    - All navigational links at the top match the flat design
-    - Navigation has a hover state as per flat design or style to match the design if the designer hasn't provided
-    - Dropdown menu styled as per design or style this yourself has not been provided
+    nav1: All navigational links at the top match the flat design
+    nav2: Navigation has a hover state as per flat design or style to match the design if the designer hasn't provided
+    nav3: Dropdown menu styled as per design or style this yourself has not been provided
   Carousel / Hero:
-    - Homepage carousel has the slides from flat design or additional images
-    - Inner page carousel is reduce,removed or replaced with hero image to match the to design
+    hero1: Homepage carousel has the slides from flat design or additional images
+    hero2: Inner page carousel is reduce,removed or replaced with hero image to match the to design
   Contact Details:
-    - All contact information styled as per flat design
+    con1: All contact information styled as per flat design
+  Nivigation:
+    niv1: All navigational links at the top match the flat design
+    niv2: Navigation has a hover state as per flat design or style to match the design if the designer hasn't provided
+    niv3: Dropdown menu styled as per design or style this yourself has not been provided
 Browser & Responsive Testing:
   Responsive:
-    - All pages respond and view correctly on all viewport sizes
-    - Content has good use of space on all viewports
-    - UI elements still work on touch devices. For example it is still clear to a user a button has been clicked or that item is a link.
+    res1: All pages respond and view correctly on all viewport sizes
+    res2: Content has good use of space on all viewports
+    res3: UI elements still work on touch devices. For example it is still clear to a user a button has been clicked or that item is a link.
   Browser:
-    - Tested on mobile device
-    - Emulated or tested on iOS and Android device
-    - Tested or emulated on Tablet device
+    bow1: Tested on mobile device
+    bow2: Emulated or tested on iOS and Android device
+    bow3: Tested or emulated on Tablet device
