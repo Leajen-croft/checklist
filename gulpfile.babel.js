@@ -9,6 +9,7 @@ import rimraf   from 'rimraf';
 import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
+import pdf      from 'gulp-html-pdf';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -26,12 +27,18 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide));
+ gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide, toPdf));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
   gulp.series('build', server, watch));
 
+
+function toPdf() {
+  return gulp.src(PATHS.dist + '/index.html')
+    .pipe(pdf())
+    .pipe(gulp.dest(PATHS.dist +'/pdf'))
+}
 // Delete the "dist" folder
 // This happens every time a build starts
 function clean(done) {
