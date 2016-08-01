@@ -1,5 +1,10 @@
+header h1 {
+  font-size: rem-calc(30);
+  line-height: rem-calc(30);
+  margin: 0;
+}
 .header h2 {
-  background: #00aeef;
+  background: $ems-blue;
   color: #fff;
   margin: 0;
   text-align: center;
@@ -19,7 +24,7 @@
     }
   }
   li:nth-of-type(even) {
-    background: #eee;
+    background: $light-gray;
   }
 }
 
@@ -57,17 +62,17 @@ input[type=checkbox] {
     width: 50%;
   }
   .checklist__header {
-    background: #424242!important;
+    background: $ems-grey!important;
     h3 {
-      color: #ffffff !important;
+      color: $white !important;
     }
     p {
-      color: #ffffff !important;
+      color: $white !important;
     }
   }
   .header h2 {
-    background: #00aeef !important;
-    color: #ffffff !important;
+    background: $ems-blue !important;
+    color: $white !important;
   }
   .checklist__items li:nth-of-type(even) {
     background: #eee !important;

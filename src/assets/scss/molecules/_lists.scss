@@ -1,6 +1,6 @@
 .checklist__header {
-  background: #424242;
-  color: #ffffff;
+  background: $ems-grey;
+  color: $white;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -15,14 +15,20 @@
 }
 
 .checklist__option-list {
+  width: 100%;
+  break-inside: avoid;
   &:nth-of-type(odd) {
     float: left !important;
     clear: left;
-    padding-right: rem-calc(1);
   }
   &:nth-of-type(even) {
     float: right !important;
     clear: right;
-    padding-left: rem-calc(1);
   }
+}
+.checklist__options {
+  columns: 2;
+  column-gap: 2px;
+  width: 100%;
+  padding: 0 rem-calc(15);
 }

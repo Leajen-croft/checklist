@@ -1,0 +1,34 @@
+.form-group {
+  position: relative;
+  margin: 0 0 rem-calc(15);
+  input {
+    font-size: rem-calc(18);
+    padding:rem-calc(10 10 10 5);
+    display:block;
+    border:none;
+    border-bottom:1px solid $ems-grey;
+    box-shadow: none;
+    margin: 0;
+    &:focus, &.used {
+      outline: none;
+      box-shadow: none;
+      border: none;
+      border:none;
+      border-bottom:1px solid $ems-blue;
+    }
+    &:focus ~ label, &.used ~ label  {
+      top : rem-calc(-20);
+      font-size: rem-calc(14);
+    }
+  }
+  label {
+    font-size:rem-calc(18);
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:rem-calc(5);
+    top:rem-calc(10);
+    transition:0.2s ease all;
+    padding-left: 15px;
+  }
+}
