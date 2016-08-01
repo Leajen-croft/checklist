@@ -1,0 +1,28 @@
+.checklist__header {
+  background: #424242;
+  color: #ffffff;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  p {
+    font-size: rem-calc(14);
+    margin: 0;
+  }
+}
+
+.checklist {
+  margin-bottom: rem-calc(5);
+}
+
+.checklist__option-list {
+  &:nth-of-type(odd) {
+    float: left !important;
+    clear: left;
+    padding-right: rem-calc(1);
+  }
+  &:nth-of-type(even) {
+    float: right !important;
+    clear: right;
+    padding-left: rem-calc(1);
+  }
+}
