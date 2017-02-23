@@ -47,5 +47,8 @@
       "es2015"
     ]
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "gulp-inline-source": "^3.0.0"
+  }
 }

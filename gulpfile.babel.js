@@ -10,6 +10,7 @@ import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
 import pdf      from 'gulp-html-pdf';
+import inlinesource from 'gulp-inline-source';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -27,12 +28,17 @@ function loadConfig() {
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide, toPdf));
+ gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide, inlineCss, toPdf));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
   gulp.series('build', server, watch));
 
+function inlineCss() {
+  return gulp.src(PATHS.dist + '/index.html')
+        .pipe(inlinesource())
+        .pipe(gulp.dest('./dist'));
+}
 
 function toPdf() {
   return gulp.src(PATHS.dist + '/index.html')

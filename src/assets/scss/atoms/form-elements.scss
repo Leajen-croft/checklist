@@ -2,8 +2,8 @@
   position: relative;
   margin: 0 0 rem-calc(15);
   input {
-    font-size: rem-calc(18);
-    padding:rem-calc(10 10 10 5);
+    font-size: rem-calc(16);
+    padding:rem-calc(10);
     display:block;
     border:none;
     border-bottom:1px solid $ems-grey;
@@ -17,18 +17,18 @@
       border-bottom:1px solid $ems-blue;
     }
     &:focus ~ label, &.used ~ label  {
-      top : rem-calc(-20);
-      font-size: rem-calc(14);
+      top: rem-calc(-12);
+      left: rem-calc(5);
+      font-size: rem-calc(12);
     }
   }
   label {
-    font-size:rem-calc(18);
+    font-size:rem-calc(14);
     font-weight:normal;
     position:absolute;
     pointer-events:none;
-    left:rem-calc(5);
+    left:rem-calc(10);
     top:rem-calc(10);
     transition:0.2s ease all;
-    padding-left: 15px;
   }
 }

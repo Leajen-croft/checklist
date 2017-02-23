@@ -5,19 +5,70 @@ Pages:
     nav3: Dropdown menu styled as per design or style this yourself has not been provided
   Carousel / Hero:
     hero1: Homepage carousel has the slides from flat design or additional images
-    hero2: Inner page carousel is reduce,removed or replaced with hero image to match the to design
+    hero2: Inner page carousel is reduced, removed or replaced with hero image to match the to design
   Contact Details:
     con1: All contact information styled as per flat design
-  Nivigation:
-    niv1: All navigational links at the top match the flat design
-    niv2: Navigation has a hover state as per flat design or style to match the design if the designer hasn't provided
-    niv3: Dropdown menu styled as per design or style this yourself has not been provided
+    con2: All Links have 'tel:' for numbers and 'mailto:' for emails
+    con3: Contact details are present in the header on all views
+  Content and Sections:
+    cos1: All margins and padding match design
+    con2: Site colours match the colours used in the design
+    cos3: Typography matches design with correct fonts, styles and line heights
+    cos4: Default styles have been created for h1-h5, p, ol and ul to match the design
+    cos5: Content on all pages is styled as per design
+    cos6: Duplicate information in CTAs or sidebars is removed where applicable
+    cos7: Content and sidebars are balanced with each other
+    cos8: Sidebars removed from pages where is it not needed (Gallery, Contact us, etc.)
+    cos9: Content has been added for each page, has been formatted correctly, and has been spell & grammar checked
+    cos10: Customer image have been used where applicable and where not Shutterstock has been used instead
+    cos11: Gallery contains all customer images or has had appropriate Shutterstock placeholders added
+  Links & buttons:
+    lib1: All buttons have a hover and focus state and have been matched across the site
+    lib2: All links within content have been linked to the correct locations
+    lib3: Links in sidebars and CTAs have been checked and link to correct locations
+    lib4: Sub banner has an appropriate hover state where applicable.
+  Miscellaneous:
+    mis1: Copyright is present,has correct business name, and has correct date
+    mis2: Powered by Link is present and styled correctly
+    mis3: Social media links has been added as applicable and have a hover state matching design
+
 Browser & Responsive Testing:
-  Responsive:
-    res1: All pages respond and view correctly on all viewport sizes
-    res2: Content has good use of space on all viewports
-    res3: UI elements still work on touch devices. For example it is still clear to a user a button has been clicked or that item is a link.
   Browser:
     bow1: Tested on mobile device
     bow2: Emulated or tested on iOS and Android device
     bow3: Tested or emulated on Tablet device
+    bow4: Tested in Chrome, Firefox, Safari, IE and Edge
+  Responsive:
+    res1: All pages respond correctly and the layout is readable on all viewport sizes
+    res2: Content has good use of space on all viewports
+    res3: UI elements still work on touch devices. For example it is still clear to a user a button has been clicked or that item is a link.
+    res4: navigation has been checked to make show it does not dropdown between breakpoints
+    res5: company logo is present and readable on all viewports
+    res6: margins and padding altered accordingly for all viewports
+
+Coding and extras:
+  AWF & Notes:
+    awf1: ODIN account has been checked for AWF notes and these have been actioned
+    awf2: Account Queries have been checked for additional information regarding build and actioned if needed
+    awf3: Information from DEF has been added to site, this content has also been spellchecked and corrected on the site as needed
+    awf4: Any current site with us has been checked for content and functionality for use on the new site
+    awf5: additional paid products have been added to the site (gallery, blog, etc)
+  Coding:
+    cod1: Custom theme named as per business correctly
+    cod2: The .info file regions all in-line starting with the = sign
+    cod3: The .info theme name is in human readable format
+    cod4: Behavior file has the correct theme name and does not contain dummy content
+    cod5: CSS style sheet is formatted and structured correctly following BEM and atomic design structures
+    cod6: Template files are all within template folder and are structured in a module based folder structure
+    cod7: Good use of code commenting has been applied throughout all files including JS, CSS, and template file
+  Administration:
+    adi1: All permissions for site owner for custom node or bean blocks have been set correctly
+    adi2: The default EMS Foundation theme has been disabled along with any other themes that are not needed
+    adi3: Mailman profiles have been setup to the correct email address
+    adi4: Site information and email have been set
+    adi5: Google Analytics setup and noted on account if needed
+    adi6: Client can easily edit page content & images with a custom node types setup
+    adi7: No, HTML or CSS to reside in page content
+    adi8: Correct modules used for AWF
+    adi9: Carousel and sub banner have been setup correctly
+    adi10: Client can edit contact details from the contact admin page, across the website

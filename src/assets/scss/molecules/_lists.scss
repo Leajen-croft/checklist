@@ -5,7 +5,7 @@
   flex-flow: row wrap;
   align-items: center;
   p {
-    font-size: rem-calc(14);
+    font-size: rem-calc(10);
     margin: 0;
   }
 }
@@ -14,21 +14,16 @@
   margin-bottom: rem-calc(5);
 }
 
-.checklist__option-list {
-  width: 100%;
-  break-inside: avoid;
-  &:nth-of-type(odd) {
-    float: left !important;
-    clear: left;
-  }
-  &:nth-of-type(even) {
-    float: right !important;
-    clear: right;
+.checklist__items {
+  .row {
+    width: 50%;
+    float: left;
   }
 }
-.checklist__options {
-  columns: 2;
-  column-gap: 2px;
+.checklist__option-list {
   width: 100%;
-  padding: 0 rem-calc(15);
+  border-bottom: 1px solid $ems-grey;
+}
+.checklist__options {
+  width: 100%;
 }

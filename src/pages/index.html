@@ -1,96 +1,55 @@
 ---
 layout: default
 ---
-{{#each checklist}}
-  <div class="checklist row">
-      <div class="header small-12 columns">
-        <h2>{{@key}}</h2>
-      </div>
-      <div class="checklist__options row">
-        {{#each this}}
-        <div class="checklist__option-list">
-          <div class="row checklist__header">
-            <h3 class="small-8 columns">{{@key}}</h3>
-            <p class="small-2 columns text-center">Done</p>
-            <p class="small-2 columns text-center">QA Check</p>
-          </div>
-            <ul class="checklist__items clearfix">
-              {{#each this}}
-                <li class="row">
-                  <span class="small-8 columns">{{ this }}</span>
-                  <span class="small-2 columns text-center">
-                    <input type="checkbox" id="done--{{@key}}{{@index}}" name="done---{{@key}}{{@index}}" value="check">
-                    <label for="done--{{@key}}{{@index}}">
-                      <svg class="icon icon-checkbox-off checkbox"><use xlink:href="#icon-checkbox-off"></use></svg>
-                     <svg class="icon icon-checkbox-on checkbox"><use xlink:href="#icon-checkbox-on"></use></svg>
-                    </label>
-                </span>
-
-                  <span class="small-2 columns text-center">
-                    <input type="checkbox" id="qa--{{@key}}{{@index}}" name="qa---{{@key}}{{@index}}" value="check">
-                    <label for="qa--{{@key}}{{@index}}">
-                      <svg class="icon icon-checkbox-off checkbox"><use xlink:href="#icon-checkbox-off"></use></svg>
-                     <svg class="icon icon-checkbox-on checkbox"><use xlink:href="#icon-checkbox-on"></use></svg>
-                    </label>
-                  </span>
-                </li>
-              {{/each}}
-            </ul>
+<div class="checklist row">
+  {{#each checklist}}
+    <div class="checklist-section">
+        <div class="header">
+          <h2>{{@key}}</h2>
         </div>
-        {{/each}}
-      </div>
-    </div>
-{{/each}}
+        <div class="checklist__options row">
+          {{#each this}}
+          <div class="checklist__option-list">
+            <div class="row checklist__header">
+              <h3 class="small-4 columns">{{@key}}</h3>
+              <p class="small-1 columns text-center">Done</p>
+              <p class="small-1 columns text-center">QA Check</p>
+              <h3 class="small-4 columns"></h3>
+              <p class="small-1 columns text-center">Done</p>
+              <p class="small-1 columns text-center">QA Check</p>
+            </div>
+              <ul class="checklist__items clearfix" data-equalizer="list">
+                {{#each this}}
+                  <li class="row" data-equalizer-watch="list">
+                    <span class="small-8 columns">{{ this }}</span>
+                    <span class="small-2 columns text-center">
+                      <input type="checkbox" id="done--{{@key}}{{@index}}" name="done---{{@key}}{{@index}}" value="check">
+                      <label for="done--{{@key}}{{@index}}">
+                        <svg class="icon icon-checkbox-off checkbox" viewBox="0 0 32 32">
+                          <title>checkbox off</title>
+                          <path class="checkbox__box" d="M6.667 2.667c-2.267 0-4 1.733-4 4v18.667c0 2.267 1.733 4 4 4h18.667c2.267 0 4-1.733 4-4v-18.667c0-2.267-1.733-4-4-4 0 0-18.667 0-18.667 0zM32 6.667v18.667c0 3.733-2.933 6.667-6.667 6.667h-18.667c-3.733 0-6.667-2.933-6.667-6.667v-18.667c0-3.733 2.933-6.667 6.667-6.667h18.667c3.733 0 6.667 2.933 6.667 6.667z"></path>
+                        </svg>
+                        <svg class="icon icon-checkbox-on checkbox" viewBox="0 0 32 32">
+                          <title>checkbox on</title>
+                          <path class="checkbox__box" d="M6.667 2.667c-2.267 0-4 1.733-4 4v18.667c0 2.267 1.733 4 4 4h18.667c2.267 0 4-1.733 4-4v-18.667c0-2.267-1.733-4-4-4 0 0-18.667 0-18.667 0zM32 6.667v18.667c0 3.733-2.933 6.667-6.667 6.667h-18.667c-3.733 0-6.667-2.933-6.667-6.667v-18.667c0-3.733 2.933-6.667 6.667-6.667h18.667c3.733 0 6.667 2.933 6.667 6.667z"></path>
+                          <path class="checkbox__arrow" d="M13.333 22.667l-6-5.733 1.867-2 4.133 4 9.333-9.6 2 1.867z"></path>
+                        </svg>
+                      </label>
+                  </span>
 
-
-<!-- <div class="row">
-  <div class="small-12 medium-6 columns">
-    <table>
-      <thead>
-        <tr>
-          <td>
-            homepage
-          </td>
-          <td>
-            complete
-          </td>
-          <td>
-            sign off
-          </td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            test
-          </td>
-          <td>
-            <input type="checkbox" name="check" value="check">
-          </td>
-          <td>
-            <input type="checkbox" name="check" value="check">
-          </td>
-        </tr>
-          {{#each breakfast}}
-          <tr>
-            <td>
-              <h2>{{@key}}</h2>
-            </td>
-            <td>
-            </td>
-            <td>
-            </td>
-          </tr>
-            {{#each this}}
-              <tr>
-                <td> {{ this }} </td>
-                <td><input type="checkbox" name="check" value="check"></td>
-                <td><input type="checkbox" name="check" value="check"></td>
-              </tr>
-            {{/each}}
+                    <span class="small-2 columns text-center">
+                      <input type="checkbox" id="qa--{{@key}}{{@index}}" name="qa---{{@key}}{{@index}}" value="check">
+                      <label for="qa--{{@key}}{{@index}}">
+                        <svg class="icon icon-checkbox-off checkbox"><use xlink:href="#icon-checkbox-off"></use></svg>
+                       <svg class="icon icon-checkbox-on checkbox"><use xlink:href="#icon-checkbox-on"></use></svg>
+                      </label>
+                    </span>
+                  </li>
+                {{/each}}
+              </ul>
+          </div>
           {{/each}}
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div> -->
+        </div>
+      </div>
+  {{/each}}
+</div>
